@@ -1,9 +1,9 @@
 const level = require('level-rocksdb');
 
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
-const IdentityPublicKey = require('@dashevo/dpp/lib/identity/IdentityPublicKey');
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
+const IdentityPublicKey = require('@xazab/dpp/lib/identity/IdentityPublicKey');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
 
 const LevelDBTransaction = require('../../../lib/levelDb/LevelDBTransaction');
 

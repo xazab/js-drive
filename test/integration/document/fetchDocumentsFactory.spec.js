@@ -1,11 +1,11 @@
 const level = require('level-rocksdb');
 const LRUCache = require('lru-cache');
-const { mocha: { startMongoDb } } = require('@dashevo/dp-services-ctl');
-const DashPlatformProtocol = require('@dashevo/dpp');
+const { mocha: { startMongoDb } } = require('@xazab/dp-services-ctl');
+const XazabPlatformProtocol = require('@xazab/dpp');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
 const convertWhereToMongoDbQuery = require('../../../lib/document/mongoDbRepository/convertWhereToMongoDbQuery');
 const validateQueryFactory = require('../../../lib/document/query/validateQueryFactory');
@@ -57,7 +57,7 @@ describe('fetchDocumentsFactory', () => {
 
     dataContractRepository = new DataContractLevelDBRepository(
       dataContractLevelDB,
-      new DashPlatformProtocol(),
+      new XazabPlatformProtocol(),
     );
 
     dataContract = getDataContractFixture();

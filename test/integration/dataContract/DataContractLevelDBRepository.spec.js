@@ -1,9 +1,9 @@
 const level = require('level-rocksdb');
 const cbor = require('cbor');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const createDPPMock = require('@dashevo/dpp/lib/test/mocks/createDPPMock');
-const DataContract = require('@dashevo/dpp/lib/dataContract/DataContract');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const createDPPMock = require('@xazab/dpp/lib/test/mocks/createDPPMock');
+const DataContract = require('@xazab/dpp/lib/dataContract/DataContract');
 
 const LevelDBTransaction = require('../../../lib/levelDb/LevelDBTransaction');
 

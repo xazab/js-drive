@@ -1,9 +1,9 @@
-const { mocha: { startMongoDb } } = require('@dashevo/dp-services-ctl');
+const { mocha: { startMongoDb } } = require('@xazab/dp-services-ctl');
 
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const Document = require('@dashevo/dpp/lib/document/Document');
-const Identifier = require('@dashevo/dpp/lib/Identifier');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const Document = require('@xazab/dpp/lib/document/Document');
+const Identifier = require('@xazab/dpp/lib/Identifier');
 
 const DocumentMongoDbRepository = require('../../../../lib/document/mongoDbRepository/DocumentMongoDbRepository');
 
@@ -425,7 +425,7 @@ describe('DocumentMongoDbRepository', function main() {
 
       it('should return empty array if where clause conditions do not match', async () => {
         const query = {
-          where: [['name', '==', 'Dash enthusiast']],
+          where: [['name', '==', 'Xazab enthusiast']],
         };
 
         const result = await documentRepository.fetch(query, documentSchema);

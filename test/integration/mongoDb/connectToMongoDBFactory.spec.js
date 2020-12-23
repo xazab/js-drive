@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const { startMongoDb } = require('@dashevo/dp-services-ctl');
+const { startMongoDb } = require('@xazab/dp-services-ctl');
 
 const connectToMongoDBFactory = require('../../../lib/mongoDb/connectToMongoDBFactory');
 

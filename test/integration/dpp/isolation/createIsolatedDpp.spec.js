@@ -1,18 +1,18 @@
-const createStateRepositoryMock = require('@dashevo/dpp/lib/test/mocks/createStateRepositoryMock');
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
+const createStateRepositoryMock = require('@xazab/dpp/lib/test/mocks/createStateRepositoryMock');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
 const getIdentityCreateTransitionFixture = require(
-  '@dashevo/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture',
+  '@xazab/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture',
 );
-const getDocumentTransitionsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentTransitionsFixture');
-const DocumentsBatchTransition = require('@dashevo/dpp/lib/document/stateTransition/DocumentsBatchTransition');
-const DataContractCreateTransition = require('@dashevo/dpp/lib/dataContract/stateTransition/DataContractCreateTransition');
+const getDocumentTransitionsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentTransitionsFixture');
+const DocumentsBatchTransition = require('@xazab/dpp/lib/document/stateTransition/DocumentsBatchTransition');
+const DataContractCreateTransition = require('@xazab/dpp/lib/dataContract/stateTransition/DataContractCreateTransition');
 
-const IdentityPublicKey = require('@dashevo/dpp/lib/identity/IdentityPublicKey');
-const { PrivateKey } = require('@dashevo/dashcore-lib');
+const IdentityPublicKey = require('@xazab/dpp/lib/identity/IdentityPublicKey');
+const { PrivateKey } = require('@xazab/xazabcore-lib');
 
-const InvalidStateTransitionError = require('@dashevo/dpp/lib/stateTransition/errors/InvalidStateTransitionError');
+const InvalidStateTransitionError = require('@xazab/dpp/lib/stateTransition/errors/InvalidStateTransitionError');
 
 const createIsolatedValidatorSnapshot = require('../../../../lib/dpp/isolation/createIsolatedValidatorSnapshot');
 const createIsolatedDppFactory = require('../../../../lib/dpp/isolation/createIsolatedDppFactory');

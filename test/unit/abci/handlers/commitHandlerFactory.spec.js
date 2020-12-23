@@ -4,7 +4,7 @@ const {
   },
 } = require('abci/types');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
 
 const commitHandlerFactory = require('../../../../lib/abci/handlers/commitHandlerFactory');
 

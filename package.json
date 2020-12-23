@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/drive",
+  "name": "@xazab/drive",
   "version": "0.16.1",
-  "description": "Replicated state machine for Dash Platform",
+  "description": "Replicated state machine for xazab Platform",
   "engines": {
     "node": ">=12"
   },
@@ -40,15 +40,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dashevo/js-drive.git"
+    "url": "git+https://github.com/xazab/js-drive.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dashevo/js-drive/issues"
+    "url": "https://github.com/xazab/js-drive/issues"
   },
-  "homepage": "https://github.com/dashevo/js-drive",
+  "homepage": "https://github.com/xazab/js-drive",
   "devDependencies": {
-    "@dashevo/dp-services-ctl": "^0.14.0",
+    "@xazab/dp-services-ctl": "^0.14.0",
     "@types/pino": "^6.3.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -64,9 +64,9 @@
     "sinon-chai": "^3.5.0"
   },
   "dependencies": {
-    "@dashevo/dashcore-lib": "~0.18.14",
-    "@dashevo/dashd-rpc": "^2.0.2",
-    "@dashevo/dpp": "~0.16.0",
+    "@xazab/xazabcore-lib": "~0.18.14",
+    "@xazab/xazabd-rpc": "^2.0.2",
+    "@xazab/dpp": "~0.16.0",
     "abci": "^5.0.1",
     "ajv": "^6.10.0",
     "ajv-keywords": "^3.5.2",

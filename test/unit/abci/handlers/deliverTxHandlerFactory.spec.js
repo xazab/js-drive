@@ -4,14 +4,14 @@ const {
   },
 } = require('abci/types');
 
-const DashPlatformProtocol = require('@dashevo/dpp');
+const XazabPlatformProtocol = require('@xazab/dpp');
 
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
 
-const createDPPMock = require('@dashevo/dpp/lib/test/mocks/createDPPMock');
-const createStateRepositoryMock = require('@dashevo/dpp/lib/test/mocks/createStateRepositoryMock');
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const getDocumentFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
+const createDPPMock = require('@xazab/dpp/lib/test/mocks/createDPPMock');
+const createStateRepositoryMock = require('@xazab/dpp/lib/test/mocks/createStateRepositoryMock');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const getDocumentFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
 const BlockExecutionStateMock = require('../../../../lib/test/mock/BlockExecutionStateMock');
 const ValidationResult = require('../../../../lib/document/query/ValidationResult');
 
@@ -38,7 +38,7 @@ describe('deliverTxHandlerFactory', () => {
     const dataContractFixture = getDataContractFixture();
     const documentFixture = getDocumentFixture();
 
-    dpp = new DashPlatformProtocol();
+    dpp = new XazabPlatformProtocol();
     documentsBatchTransitionFixture = dpp.document.createStateTransition({
       create: documentFixture,
     });

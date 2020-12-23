@@ -1,10 +1,10 @@
 const level = require('level-rocksdb');
 const cbor = require('cbor');
 
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
-const createDPPMock = require('@dashevo/dpp/lib/test/mocks/createDPPMock');
-const Identity = require('@dashevo/dpp/lib/identity/Identity');
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
+const createDPPMock = require('@xazab/dpp/lib/test/mocks/createDPPMock');
+const Identity = require('@xazab/dpp/lib/identity/Identity');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
 const LevelDBTransaction = require('../../../lib/levelDb/LevelDBTransaction');
 

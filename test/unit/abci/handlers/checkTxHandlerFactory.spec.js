@@ -4,7 +4,7 @@ const {
   },
 } = require('abci/types');
 
-const getIdentityCreateTransitionFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture');
+const getIdentityCreateTransitionFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture');
 
 const checkTxHandlerFactory = require('../../../../lib/abci/handlers/checkTxHandlerFactory');
 

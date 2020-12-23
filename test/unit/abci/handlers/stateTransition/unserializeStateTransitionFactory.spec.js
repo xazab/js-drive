@@ -1,9 +1,9 @@
-const getIdentityCreateTransitionFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture');
+const getIdentityCreateTransitionFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityCreateTransitionFixture');
 
-const ConsensusError = require('@dashevo/dpp/lib/errors/ConsensusError');
-const InvalidStateTransitionError = require('@dashevo/dpp/lib/stateTransition/errors/InvalidStateTransitionError');
-const BalanceNotEnoughError = require('@dashevo/dpp/lib/errors/BalanceIsNotEnoughError');
-const ValidatorResult = require('@dashevo/dpp/lib/validation/ValidationResult');
+const ConsensusError = require('@xazab/dpp/lib/errors/ConsensusError');
+const InvalidStateTransitionError = require('@xazab/dpp/lib/stateTransition/errors/InvalidStateTransitionError');
+const BalanceNotEnoughError = require('@xazab/dpp/lib/errors/BalanceIsNotEnoughError');
+const ValidatorResult = require('@xazab/dpp/lib/validation/ValidationResult');
 
 const unserializeStateTransitionFactory = require('../../../../../lib/abci/handlers/stateTransition/unserializeStateTransitionFactory');
 

@@ -19,7 +19,7 @@ RUN npm ci --production
 
 FROM node:12-alpine
 
-LABEL maintainer="Dash Developers <dev@dash.org>"
+LABEL maintainer="Xazab Developers <dev@xazab.xyz>"
 LABEL description="Drive Node.JS"
 
 RUN apk update && apk add --no-cache zeromq-dev
