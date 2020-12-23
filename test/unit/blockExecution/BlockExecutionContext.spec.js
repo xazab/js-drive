@@ -1,4 +1,4 @@
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
 const BlockExecutionContext = require('../../../lib/blockExecution/BlockExecutionContext');
 
 describe('BlockExecutionContext', () => {

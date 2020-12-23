@@ -1,7 +1,7 @@
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
 const DriveStateRepository = require('../../../lib/dpp/DriveStateRepository');
 

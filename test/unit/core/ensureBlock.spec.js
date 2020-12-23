@@ -4,7 +4,7 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 chai.should();
 
-const ZMQClient = require('@dashevo/dashd-zmq');
+const ZMQClient = require('@xazab/xazabd-zmq');
 const EventEmitter = require('events');
 const ensureBlock = require('../../../lib/core/ensureBlock');
 

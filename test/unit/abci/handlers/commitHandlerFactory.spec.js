@@ -4,12 +4,12 @@ const {
       ResponseCommit,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
 const Long = require('long');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const createDPPMock = require('@dashevo/dpp/lib/test/mocks/createDPPMock');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const createDPPMock = require('@xazab/dpp/lib/test/mocks/createDPPMock');
 
 const commitHandlerFactory = require('../../../../lib/abci/handlers/commitHandlerFactory');
 

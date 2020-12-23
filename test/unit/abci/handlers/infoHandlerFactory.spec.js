@@ -6,7 +6,7 @@ const {
       ResponseInfo,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
 const infoHandlerFactory = require('../../../../lib/abci/handlers/infoHandlerFactory');
 

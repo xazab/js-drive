@@ -6,9 +6,9 @@ const {
       ResponseQuery,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
 const identityIdsByPublicKeyHashesQueryHandlerFactory = require(
   '../../../../../lib/abci/handlers/query/identityIdsByPublicKeyHashesQueryHandlerFactory',

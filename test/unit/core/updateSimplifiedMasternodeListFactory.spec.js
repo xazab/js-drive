@@ -1,4 +1,4 @@
-const SimplifiedMNListDiff = require('@dashevo/dashcore-lib/lib/deterministicmnlist/SimplifiedMNListDiff');
+const SimplifiedMNListDiff = require('@xazab/xazabcore-lib/lib/deterministicmnlist/SimplifiedMNListDiff');
 const { expect } = require('chai');
 const updateSimplifiedMasternodeListFactory = require('../../../lib/core/updateSimplifiedMasternodeListFactory');
 const NotEnoughBlocksForValidSMLError = require('../../../lib/core/errors/NotEnoughBlocksForValidSMLError');

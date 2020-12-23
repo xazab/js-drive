@@ -1,5 +1,5 @@
-const createDPPMock = require('@dashevo/dpp/lib/test/mocks/createDPPMock');
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
+const createDPPMock = require('@xazab/dpp/lib/test/mocks/createDPPMock');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
 
 const populateMongoDbTransactionFromObjectFactory = require('../../../lib/document/populateMongoDbTransactionFromObjectFactory');
 const DocumentsDBTransactionIsNotStartedError = require('../../../lib/document/errors/DocumentsDBTransactionIsNotStartedError');

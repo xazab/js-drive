@@ -4,10 +4,10 @@ const {
       ResponseQuery,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 const cbor = require('cbor');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
 
 const dataContractQueryHandlerFactory = require('../../../../../lib/abci/handlers/query/dataContractQueryHandlerFactory');
 
