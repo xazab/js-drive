@@ -4,7 +4,7 @@ const {
       ResponseInitChain,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
 const initChainHandlerFactory = require('../../../../lib/abci/handlers/initChainHandlerFactory');
 

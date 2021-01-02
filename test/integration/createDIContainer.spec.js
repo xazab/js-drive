@@ -1,4 +1,4 @@
-const { startMongoDb } = require('@dashevo/dp-services-ctl');
+const { startMongoDb } = require('@xazab/dp-services-ctl');
 
 const createTestDIContainer = require('../../lib/test/createTestDIContainer');
 

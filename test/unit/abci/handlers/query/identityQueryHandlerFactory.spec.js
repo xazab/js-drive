@@ -4,10 +4,10 @@ const {
       ResponseQuery,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 const cbor = require('cbor');
 
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
 
 const identityQueryHandlerFactory = require('../../../../../lib/abci/handlers/query/identityQueryHandlerFactory');
 

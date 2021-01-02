@@ -1,4 +1,4 @@
-const { startMongoDb, startDashCore } = require('@dashevo/dp-services-ctl');
+const { startMongoDb, startXazabCore } = require('@xazab/dp-services-ctl');
 
 const createTestDIContainer = require('../../../lib/test/createTestDIContainer');
 
@@ -6,9 +6,9 @@ describe('waitForCoreSyncFactory', function main() {
   this.timeout(90000);
 
   let mongoDB;
-  let firstDashCore;
-  let secondDashCore;
-  let thirdDashCore;
+  let firstXazabCore;
+  let secondXazabCore;
+  let thirdXazabCore;
   let container;
   let waitForCoreSync;
 
@@ -18,16 +18,16 @@ describe('waitForCoreSyncFactory', function main() {
 
   after(async () => {
     await mongoDB.remove();
-    if (firstDashCore) {
-      await firstDashCore.remove();
+    if (firstXazabCore) {
+      await firstXazabCore.remove();
     }
 
-    if (secondDashCore) {
-      await secondDashCore.remove();
+    if (secondXazabCore) {
+      await secondXazabCore.remove();
     }
 
-    if (thirdDashCore) {
-      await thirdDashCore.remove();
+    if (thirdXazabCore) {
+      await thirdXazabCore.remove();
     }
   });
 
@@ -37,20 +37,20 @@ describe('waitForCoreSyncFactory', function main() {
     }
   });
 
-  it('should wait until Dash Core in regtest mode with peers is synced', async () => {
-    firstDashCore = await startDashCore();
-    const { result: randomAddress } = await firstDashCore.getApi().getNewAddress();
-    await firstDashCore.getApi().generateToAddress(1000, randomAddress);
+  it('should wait until Xazab Core in regtest mode with peers is synced', async () => {
+    firstXazabCore = await startXazabCore();
+    const { result: randomAddress } = await firstXazabCore.getApi().getNewAddress();
+    await firstXazabCore.getApi().generateToAddress(1000, randomAddress);
 
-    secondDashCore = await startDashCore();
-    await secondDashCore.connect(firstDashCore);
+    secondXazabCore = await startXazabCore();
+    await secondXazabCore.connect(firstXazabCore);
 
-    container = await createTestDIContainer(mongoDB, secondDashCore);
+    container = await createTestDIContainer(mongoDB, secondXazabCore);
     waitForCoreSync = container.resolve('waitForCoreSync');
 
     await waitForCoreSync(() => {});
 
-    const secondApi = secondDashCore.getApi();
+    const secondApi = secondXazabCore.getApi();
 
     const {
       result: {

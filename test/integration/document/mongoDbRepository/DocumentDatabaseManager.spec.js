@@ -1,6 +1,6 @@
-const { mocha: { startMongoDb } } = require('@dashevo/dp-services-ctl');
+const { mocha: { startMongoDb } } = require('@xazab/dp-services-ctl');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
 
 const DocumentDatabaseManager = require('../../../../lib/document/mongoDbRepository/DocumentDatabaseManager');
 const convertToMongoDbIndices = require('../../../../lib/document/mongoDbRepository/convertToMongoDbIndices');

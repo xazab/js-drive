@@ -47,7 +47,7 @@ All tools are [bootstrapped](../lib/test/bootstrap.js) before tests:
  - Envs from `.env` are loaded before all tests
 
 ## Evolution helpers
-We use [js-evo-services-ctl](https://github.com/dashevo/js-evo-services-ctl) library to manipulate Evolution's services.
+We use [js-evo-services-ctl](https://github.com/xazab/js-evo-services-ctl) library to manipulate Evolution's services.
 
 ## Other tools
 

@@ -1,4 +1,4 @@
-const { startMongoDb, startDashCore } = require('@dashevo/dp-services-ctl');
+const { startMongoDb, startXazabCore } = require('@xazab/dp-services-ctl');
 
 const createTestDIContainer = require('../../../lib/test/createTestDIContainer');
 
@@ -7,8 +7,8 @@ describe('detectStandaloneRegtestModeFactory', function main() {
 
   let mongoDB;
   let container;
-  let firstDashCore;
-  let secondDashCore;
+  let firstXazabCore;
+  let secondXazabCore;
 
   before(async () => {
     mongoDB = await startMongoDb();
@@ -16,12 +16,12 @@ describe('detectStandaloneRegtestModeFactory', function main() {
 
   after(async () => {
     await mongoDB.remove();
-    if (firstDashCore) {
-      await firstDashCore.remove();
+    if (firstXazabCore) {
+      await firstXazabCore.remove();
     }
 
-    if (secondDashCore) {
-      await secondDashCore.remove();
+    if (secondXazabCore) {
+      await secondXazabCore.remove();
     }
   });
 
@@ -32,9 +32,9 @@ describe('detectStandaloneRegtestModeFactory', function main() {
   });
 
   it('should return true if chain is regtest and has no peers', async () => {
-    firstDashCore = await startDashCore();
+    firstXazabCore = await startXazabCore();
 
-    container = await createTestDIContainer(mongoDB, firstDashCore);
+    container = await createTestDIContainer(mongoDB, firstXazabCore);
 
     const detectStandaloneRegtestMode = container.resolve('detectStandaloneRegtestMode');
 
@@ -44,12 +44,12 @@ describe('detectStandaloneRegtestModeFactory', function main() {
   });
 
   it('should return false if peers count > 0', async () => {
-    firstDashCore = await startDashCore();
+    firstXazabCore = await startXazabCore();
 
-    secondDashCore = await startDashCore();
-    await secondDashCore.connect(firstDashCore);
+    secondXazabCore = await startXazabCore();
+    await secondXazabCore.connect(firstXazabCore);
 
-    container = await createTestDIContainer(mongoDB, firstDashCore);
+    container = await createTestDIContainer(mongoDB, firstXazabCore);
 
     const detectStandaloneRegtestMode = container.resolve('detectStandaloneRegtestMode');
 

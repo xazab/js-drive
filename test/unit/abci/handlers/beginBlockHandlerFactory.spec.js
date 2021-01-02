@@ -6,7 +6,7 @@ const {
       ResponseBeginBlock,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
 const beginBlockHandlerFactory = require('../../../../lib/abci/handlers/beginBlockHandlerFactory');
 

@@ -1,7 +1,7 @@
-const { mocha: { startMongoDb } } = require('@dashevo/dp-services-ctl');
+const { mocha: { startMongoDb } } = require('@xazab/dp-services-ctl');
 
-const getDataContractFixture = require('@dashevo/dpp/lib/test/fixtures/getDataContractFixture');
-const getDocumentsFixture = require('@dashevo/dpp/lib/test/fixtures/getDocumentsFixture');
+const getDataContractFixture = require('@xazab/dpp/lib/test/fixtures/getDataContractFixture');
+const getDocumentsFixture = require('@xazab/dpp/lib/test/fixtures/getDocumentsFixture');
 
 const createTestDIContainer = require('../../../lib/test/createTestDIContainer');
 

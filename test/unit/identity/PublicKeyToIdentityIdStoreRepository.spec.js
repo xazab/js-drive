@@ -1,5 +1,5 @@
-const getIdentityFixture = require('@dashevo/dpp/lib/test/fixtures/getIdentityFixture');
-const IdentityPublicKey = require('@dashevo/dpp/lib/identity/IdentityPublicKey');
+const getIdentityFixture = require('@xazab/dpp/lib/test/fixtures/getIdentityFixture');
+const IdentityPublicKey = require('@xazab/dpp/lib/identity/IdentityPublicKey');
 
 const StoreMock = require('../../../lib/test/mock/StoreMock');
 

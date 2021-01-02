@@ -1,5 +1,5 @@
 const EventEmitter = require('events');
-const ZMQClient = require('@dashevo/dashd-zmq');
+const ZMQClient = require('@xazab/xazabd-zmq');
 const LatestCoreChainLock = require('../../../lib/core/LatestCoreChainLock');
 const waitForCoreChainLockSyncFallbackFactory = require('../../../lib/core/waitForCoreChainLockSyncFallbackFactory');
 

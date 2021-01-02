@@ -1,4 +1,4 @@
-const { startMongoDb, startDashCore } = require('@dashevo/dp-services-ctl');
+const { startMongoDb, startXazabCore } = require('@xazab/dp-services-ctl');
 
 const createTestDIContainer = require('../../../lib/test/createTestDIContainer');
 
@@ -6,13 +6,13 @@ describe('waitReplicaSetInitializeFactory', function main() {
   this.timeout(90000);
 
   let mongoDB;
-  let dashCore;
+  let xazabCore;
   let container;
   let waitReplicaSetInitialize;
 
   before(async () => {
     mongoDB = await startMongoDb();
-    dashCore = await startDashCore();
+    xazabCore = await startXazabCore();
   });
 
   after(async () => {
@@ -26,7 +26,7 @@ describe('waitReplicaSetInitializeFactory', function main() {
   });
 
   it('should wait until mongodb replica set is initialed', async () => {
-    container = await createTestDIContainer(mongoDB, dashCore);
+    container = await createTestDIContainer(mongoDB, xazabCore);
 
     waitReplicaSetInitialize = container.resolve('waitReplicaSetInitialize');
 

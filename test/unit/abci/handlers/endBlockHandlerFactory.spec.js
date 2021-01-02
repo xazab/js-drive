@@ -7,16 +7,16 @@ const {
       CoreChainLock,
     },
   },
-} = require('@dashevo/abci/types');
+} = require('@xazab/abci/types');
 
-const generateRandomIdentifier = require('@dashevo/dpp/lib/test/utils/generateRandomIdentifier');
+const generateRandomIdentifier = require('@xazab/dpp/lib/test/utils/generateRandomIdentifier');
 
 const endBlockHandlerFactory = require('../../../../lib/abci/handlers/endBlockHandlerFactory');
 
 const BlockExecutionContextMock = require('../../../../lib/test/mock/BlockExecutionContextMock');
 
 const NoDPNSContractFoundError = require('../../../../lib/abci/handlers/errors/NoDPNSContractFoundError');
-const NoDashpayContractFoundError = require('../../../../lib/abci/handlers/errors/NoDashpayContractFoundError');
+const NoXazabContractFoundError = require('../../../../lib/abci/handlers/errors/NoXazabContractFoundError');
 
 describe('endBlockHandlerFactory', () => {
   let endBlockHandler;
@@ -25,8 +25,8 @@ describe('endBlockHandlerFactory', () => {
   let blockExecutionContextMock;
   let dpnsContractId;
   let dpnsContractBlockHeight;
-  let dashpayContractId;
-  let dashpayContractBlockHeight;
+  let xazabContractId;
+  let xazabContractBlockHeight;
   let latestCoreChainLockMock;
   let loggerMock;
   let chainLockMock;
@@ -60,15 +60,15 @@ describe('endBlockHandlerFactory', () => {
     dpnsContractId = generateRandomIdentifier();
     dpnsContractBlockHeight = 2;
 
-    dashpayContractId = generateRandomIdentifier();
-    dashpayContractBlockHeight = 2;
+    xazabContractId = generateRandomIdentifier();
+    xazabContractBlockHeight = 2;
 
     endBlockHandler = endBlockHandlerFactory(
       blockExecutionContextMock,
       dpnsContractBlockHeight,
       dpnsContractId,
-      dashpayContractBlockHeight,
-      dashpayContractId,
+      xazabContractBlockHeight,
+      xazabContractId,
       latestCoreChainLockMock,
       loggerMock,
     );
@@ -165,7 +165,7 @@ describe('endBlockHandlerFactory', () => {
     expect(response.nextCoreChainLockUpdate).to.deep.equal(expectedCoreChainLock);
   });
 
-  it('should simply return a response if Dashpay contract was not set', async () => {
+  it('should simply return a response if Xazab contract was not set', async () => {
     endBlockHandler = endBlockHandlerFactory(
       blockExecutionContextMock,
       undefined,
@@ -184,13 +184,13 @@ describe('endBlockHandlerFactory', () => {
     expect(blockExecutionContextMock.hasDataContract).to.not.have.been.called();
   });
 
-  it('should return a response if Dashpay contract is present at specified height', async () => {
+  it('should return a response if Xazab contract is present at specified height', async () => {
     endBlockHandler = endBlockHandlerFactory(
       blockExecutionContextMock,
       undefined,
       undefined,
-      dashpayContractBlockHeight,
-      dashpayContractId,
+      xazabContractBlockHeight,
+      xazabContractId,
       latestCoreChainLockMock,
       loggerMock,
     );
@@ -202,17 +202,17 @@ describe('endBlockHandlerFactory', () => {
     expect(response.toJSON()).to.be.empty();
 
     expect(blockExecutionContextMock.hasDataContract).to.have.been.calledOnceWithExactly(
-      dashpayContractId,
+      xazabContractId,
     );
   });
 
-  it('should throw and error if Dashpay contract is not present at specified height', async () => {
+  it('should throw and error if Xazab contract is not present at specified height', async () => {
     endBlockHandler = endBlockHandlerFactory(
       blockExecutionContextMock,
       undefined,
       undefined,
-      dashpayContractBlockHeight,
-      dashpayContractId,
+      xazabContractBlockHeight,
+      xazabContractId,
       latestCoreChainLockMock,
       loggerMock,
     );
@@ -224,12 +224,12 @@ describe('endBlockHandlerFactory', () => {
 
       expect.fail('Error was not thrown');
     } catch (e) {
-      expect(e).to.be.an.instanceOf(NoDashpayContractFoundError);
-      expect(e.getContractId()).to.equal(dashpayContractId);
-      expect(e.getHeight()).to.equal(dashpayContractBlockHeight);
+      expect(e).to.be.an.instanceOf(NoXazabContractFoundError);
+      expect(e.getContractId()).to.equal(xazabContractId);
+      expect(e.getHeight()).to.equal(xazabContractBlockHeight);
 
       expect(blockExecutionContextMock.hasDataContract).to.have.been.calledOnceWithExactly(
-        dashpayContractId,
+        xazabContractId,
       );
 
       expect(latestCoreChainLockMock.getChainLock).to.have.not.been.called();

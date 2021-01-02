@@ -1,6 +1,6 @@
 require('dotenv-expand')(require('dotenv-safe').config());
 
-const createServer = require('@dashevo/abci');
+const createServer = require('@xazab/abci');
 const { onShutdown } = require('node-graceful-shutdown');
 
 const ZMQClient = require('../lib/core/ZmqClient');

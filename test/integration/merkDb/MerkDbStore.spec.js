@@ -1,4 +1,4 @@
-const Merk = require('@dashevo/merk');
+const Merk = require('@xazab/merk');
 
 const MerkDbStore = require('../../../lib/merkDb/MerkDbStore');
 
